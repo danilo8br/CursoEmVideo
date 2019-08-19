@@ -1,14 +1,11 @@
-print('O mesmo professor do desafio\nanterior que sortear a ordem\nde apresentação de trabalhos\ndos alunos. Faça um programa\nque leia o nome dos quatro\nalunos e mostre a ordem sorteada.')
-print(35 * '-')
-
-import random
-
-n1 = input('Nome: ')
-n2 = input('Nome: ')
-n3 = input('Nome: ')
-n4 = input('Nome: ')
+from random import shuffle
+n1 = str(input('Primeiro aluno:'))
+n2 = str(input('Segundo aluno: '))
+n3 = str(input('Terceiro aluno: '))
+n4 = str(input('Quarto aluno: '))
 
 lista = [n1, n2, n3, n4]
 
-random.shuffle(lista)
-print(lista)
+shuffle(lista)
+
+print('A ordem de apresentação sera {}'.format(lista))
